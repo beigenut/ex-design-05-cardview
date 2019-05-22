@@ -9,7 +9,7 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', 'transparent', 'transparent', '#5C832F', '#B8B89F'],
+  sectionsColor: ['#B8AE9C', 'transparent', 'transparent', '#40030E', '#40030E'],
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
