@@ -1,0 +1,439 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Kodchasan:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+.icon-up-open-big {
+  display: inline-block;
+  margin: 5px 0;
+  font-size: 2rem;
+  color: #999;
+  transition: 1s;
+}
+
+.icon-up-open-big:hover {
+  color: rgb(247, 247, 247);
+}
+
+.scroll-icon {
+  position: absolute;
+  text-align: center;
+ 	left: 50%;
+  bottom: 20px;
+  padding: 0 10px;
+  	-webkit-transform: translateX(-50%);
+  	    -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  color: rgb(124, 124, 124);
+}
+
+/* HELPER CLASSES */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.l-left {
+	float: left;
+}
+
+.l-right {
+	float: right;
+}
+
+/* RESET-GENERAL STYLES */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+html {
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+/* NAV STYLES */
+.header-top {
+	position: fixed;
+  background: rgba(0, 47, 77, .3);
+	height: 70px;
+	padding: 0 10px;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	box-sizing: border-box;
+}
+
+h1 {
+	line-height: 70px;
+	height: 70px;
+}
+
+h1 a {
+	display: block;
+	padding: 0 10px;
+}
+
+.toggle-menu {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+}
+
+.toggle-menu i {
+	position: absolute;
+	display: block;
+	height: 4px;
+	background: white;
+	width: 30px;
+	left: 10px;
+	-webkit-transition: all .3s;
+	        transition: all .3s;
+}
+
+.toggle-menu i:nth-child(1) {
+	top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+	top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+	top: 32px;
+}
+
+.open-menu i:nth-child(1) {
+	top: 25px;
+	-webkit-transform: rotateZ(45deg);
+	        transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+	background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+	top: 25px;
+	-webkit-transform: rotateZ(-45deg);
+	        transform: rotateZ(-45deg);
+}
+
+nav {
+ 	height: 0;
+	opacity: 0;
+  box-sizing: border-box;
+	position: fixed;
+	top: 70px;
+	width: 100%;
+  -webkit-transition: all 3s;
+          transition: all 3s;
+}
+
+.open-menu ~ nav {
+  opacity: 1;
+ 	padding: 30px 0;
+	z-index: 15;
+	height: 160px;
+}
+
+nav ul {
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+nav li {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+nav li a {
+	display: block;
+	font-size: 1.8rem;
+	padding: 20px;
+	text-align: center;
+	-webkit-transition: background .3s;
+	        transition: background .3s;
+}
+
+nav li a:hover {
+	background: #6D7E8C;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  background: #435159;
+}
+  
+
+
+/* SECTION STYLES 1 */
+
+section { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+}
+
+section .fp-tableCell {
+  height: auto !important;
+}
+
+h2 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-weight: 300;
+  font-size: 2em;
+  line-height: 1.6rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* SECITON STYLES CUSTOMIZE */
+/* ----------- SECTION 1 -----------*/
+
+section:nth-child(1) {
+  background: url("https://image.freepik.com/free-photo/various-manicure-tools-products-white-background_23-2147971378.jpg");
+  background-size: cover;
+}
+
+section:nth-child(1) .design-box {
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 8px;
+  box-shadow: 0 15px 24px rgba(0, 0, 0, .5);
+}
+
+section:nth-child(1) .design-box h2 {
+  color: #fff;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+section:nth-child(1) .design-box .inputBox {
+  position: relative;
+}
+
+section:nth-child(1) .design-box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+section:nth-child(1) .design-box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+section:nth-child(1) .design-box .inputBox input:focus ~ label,
+section:nth-child(1) .design-box .inputBox input:valid ~ label {
+  top: -20px;
+  font-size: 0.8rem;
+  color: rgb(207, 29, 163);
+  font-weight: 700;
+}
+
+
+section:nth-child(1) .design-box form .buttonBox > input {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(207, 29, 163);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.6s;
+}
+
+section:nth-child(1) .design-box .buttonBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section:nth-child(1) .design-box .buttonBox input[type="submit"]:hover {
+  background: rgb(182, 14, 140);
+} 
+
+section:nth-child(1) .design-box .buttonBox input[type="button"] {
+  background: rgb(100, 100, 100);
+} 
+
+section:nth-child(1) .design-box .buttonBox input[type="button"]:hover {
+  background: #999;
+}
+
+/* ----------- SECTION 2 -----------*/
+
+section:nth-child(2) .design-box {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #1B1B1C;
+}
+
+section:nth-child(2) h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Dancing Script', cursive;
+  /* font-weight: 700; */
+  font-size: 9rem;
+  padding: 0 20px;
+  color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+  z-index: 1;
+}
+
+section:nth-child(2) h2:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+
+section:nth-child(2) h2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  z-index: -2;
+  opacity: 0.4;
+  filter: blur(60px);
+}
+
+/* ----------- SECTION 3 -----------*/
+
+section:nth-child(3) .design-box {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+section:nth-child(3) .design-box .section-3-column {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid rgba(0,0,0,.5);
+  z-index: 99;
+}
+
+section:nth-child(3) .design-box .section-3-column:last-child {
+  border-right: none;
+}
+
+section:nth-child(3) .design-box .section-3-column .content {
+  position: relative;
+  height: 100%;
+}
+
+section:nth-child(3) .design-box .section-3-column .content h2 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	background: rgba(0,0,0,.1);
+	text-align: center;
+	color: rgba(255,255,255,.2);
+	font-size: 15rem;
+	border-top: 2px solid rgba(0,0,0,.5);
+	border-bottom: 2px solid rgba(0,0,0,.5);
+}
+
+section:nth-child(3) .design-box .section-3-column .content .text-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(100%);
+  box-sizing: border-box;
+  padding: 40px;
+  min-height: 330px;
+  background: #fff;
+  transition: 0.5s;
+  opacity: 0;
+  color: #414141;
+}
+
+section:nth-child(3) .design-box .section-3-column.active .content .text-box {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+section:nth-child(3) .design-box .section-3-column .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  transition: 1s;    
+  background-position: center;  
+}
+
+section:nth-child(3) .design-box .section-3-column.active .bg.bg1 {
+	background: url("https://image.freepik.com/free-photo/high-angle-view-spa-stones-towel-flowers-oil-white-background_23-2147956360.jpg");
+  background-size: cover;
+}
+
+section:nth-child(3) .design-box .section-3-column.active .bg.bg2 {
+  background: url("https://image.freepik.com/free-photo/candles-leaves-near-towels_23-2147809180.jpg");
+  background-size: cover;
+}
+
+section:nth-child(3) .design-box .section-3-column.active .bg.bg3 {
+  background: url("https://image.freepik.com/free-photo/spa-accessories-dark-background_1220-3734.jpg");
+  background-size: cover;
+}
+
+section:nth-child(3) .design-box .section-3-column.active .bg.bg4 {
+  background: url("https://image.freepik.com/free-photo/illuminated-candle-stack-spa-stones-with-himalayan-salts-pink-rose-colored-background_23-2147940523.jpg");
+  background-size: cover;
+}
