@@ -1,3 +1,5 @@
+// import Typed from './vendors/typed.js';
+
 // variables
 var $header_top = $('.header-top');
 var $nav = $('nav');
@@ -9,7 +11,7 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', 'transparent', 'transparent', '#40030E', '#40030E', '#40030E'],
+  sectionsColor: ['#B8AE9C', 'transparent', 'transparent', '#40030E', '#40030E', '#FFAC00'],
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
@@ -36,4 +38,27 @@ $('#fullpage').fullpage({
 // SECTION 3 SCRIPT
 $(document).on('mouseover', '.section-3-column', function(){
   $(this).addClass('active').siblings().removeClass('active')
+})
+
+// SECTION 6 SCRIPT
+const searchEl = document.querySelector('.fake-box')
+const searchBoxEl = document.querySelector('.search-box')
+const typedEl = document.querySelector('.typed-element')
+
+const fragment = document.importNode(document.querySelector('#search').content, true)
+
+let typed = new Typed(typedEl, {
+  strings: ["React", "Java Script", "SCSS", "Wireframe", "SEO", "GIT"],
+  typeSpeed: 100,
+  backDelay: 1500,
+  loop: true,
+  backSpeed: 40
+});
+
+const hideElement = searchEl.addEventListener('click', e => {
+  e.preventDefault();
+  searchEl.style.display = "none";
+  typed.pause.status = true;
+  searchBoxEl.appendChild(fragment);
+  document.querySelector('.search-input').focus();
 })

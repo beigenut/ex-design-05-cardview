@@ -317,7 +317,6 @@ section:nth-child(2) h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Dancing Script', cursive;
-  /* font-weight: 700; */
   font-size: 9rem;
   padding: 0 20px;
   color: #fff;
@@ -333,7 +332,7 @@ section:nth-child(2) h2:after {
   padding: 0 20px;
   z-index: -1;
   color: #ff005b;
-  filter: blur(15px);
+  filter: blur(20px);
 }
 
 section:nth-child(2) h2:before {
@@ -355,15 +354,15 @@ section:nth-child(3) .design-box {
   position: relative;
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto; 
 }
 
 section:nth-child(3) .design-box .section-3-column {
-  float: left;
   box-sizing: border-box;
-  width: 25%;
   height: 100%;
   border-right: 2px solid rgba(0,0,0,.5);
-  z-index: 99;
 }
 
 section:nth-child(3) .design-box .section-3-column:last-child {
@@ -664,4 +663,85 @@ section:nth-child(5) .design-box h2 span:nth-child(8) {
 }
 section:nth-child(5) .design-box h2 span:nth-child(9) {
   animation-delay: 4.15s;
+}
+
+
+/* ----------- SECTION 6 -----------*/
+section:nth-child(6) .design-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+section:nth-child(6) .design-box h2 {
+  margin-bottom: 50px;
+  width: 100vw;
+  color: #333;
+  font-weight: 800;
+}
+
+section:nth-child(6) .tag-box ul {
+  display: flex;
+}
+
+section:nth-child(6) .tag-box ul li {
+  margin-right: 10px;
+  font-size: 1.6rem;
+}
+
+section:nth-child(6) .tag-box ul li a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.5s;
+}
+
+section:nth-child(6) .tag-box ul li:hover a {
+  color: #fff;
+}
+
+section:nth-child(6) .search-bar {
+  position: relative;
+  width: 650px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  border-radius: 3px;
+}
+
+section:nth-child(6) .search-bar:first-child {
+  cursor: pointer;
+}
+
+section:nth-child(6) .search-bar .typed-element {
+  display: inline-box;
+  margin: 20px 0 20px 18px;
+  font-size: 1.8rem;
+  color: #999;
+}
+
+section:nth-child(6)  .typed-cursor {
+  font-size: 1.8rem;
+  color: #999;
+}
+
+section:nth-child(6) .search-bar .magnifier {
+  position: absolute;
+  top: 0px;
+  right: 18px;
+}
+
+section:nth-child(6) .search-bar input {
+  width: 550px;
+  border: none;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 20px 0 20px 18px;
+  background-color: transparent;
+  outline: none;
+}
+
+section:nth-child(6) .search-bar .magnifier i {
+  font-size: 2rem;
+  line-height: 60px;
+  color: #666;
 }
