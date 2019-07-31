@@ -11,24 +11,24 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', 'transparent', 'transparent', '#40030E', '#40030E', '#FFAC00'],
+  sectionsColor: ['#B8AE9C', 'transparent', 'transparent', '#40030E', '#40030E', '#FFAC00', '#36363c'],
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection'],
+  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
     $header_top.css('background', 'rgba(0, 47, 77, .3)');
     $nav.css('background', 'rgba(0, 47, 77, .3)');
-    if (index == 5) {
+    if (index == 6) {
         $('#fp-nav').hide();
       }
   },
 
   onLeave: function(index, nextIndex, direction) {
-    if(index == 5) {
+    if(index == 6) {
       $('#fp-nav').show();
     }
   },
