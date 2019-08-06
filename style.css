@@ -38,7 +38,11 @@
 }
 
 .l-left {
-	float: left;
+  float: left;
+}
+
+.l-left a {
+  color: #fff !important;
 }
 
 .l-right {
@@ -184,7 +188,8 @@ nav li {
 }
 
 nav li a {
-	display: block;
+  display: block;
+  color: #fff;
 	font-size: 1.4rem;
 	padding: 20px 10px;
 	text-align: center;
@@ -850,3 +855,91 @@ section:nth-child(7) .box:hover .glass:nth-child(2) {
   transform: translate(60px, -80px);
 }
 
+/* ----------- SECTION 8 -----------*/
+section:nth-child(8) .design-box {
+  display: flex;
+  width: 1400px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+}
+
+section:nth-child(8) .design-box .screen {
+  background-color: #BF4980; 
+  transition: background ease-in-out 12s;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+
+section:nth-child(8) .design-box .screen.mobile {
+  width: 303px;
+  height: 520px;
+  background-image: url("http://drive.google.com/uc?export=view&id=1t2yVrab5in5KR5gmTN-O4sna_rZv2yXt"); 
+  margin-top: 20px;
+}
+
+section:nth-child(8) .design-box .screen.computer {
+  width: 960px;
+  height: 600px;
+  background-image: url("http://drive.google.com/uc?export=view&id=1rSfTJcYKtPegJy0aVS4cabnEH5bTx9-X"); 
+}
+
+section:nth-child(8) .design-box .screen:hover {
+  background-position: bottom;
+}
+
+section:nth-child(8) .design-box .screen.mobile::after {
+  content: '';
+  position: absolute;
+  top: -54px;
+  left: -15px;
+  width: 327px;
+  height: 610px;
+  z-index: 2;
+  background-image: url("http://drive.google.com/uc?export=view&id=1lrUwLF1kF8ZZ8josjHCYNEkMgJkp4aKZ");
+  background-size: cover;
+}
+
+section:nth-child(8) .design-box .screen a {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 20px 30px;
+  border: 2px solid rgb(255, 229, 189);
+  background-color: rgba(109, 126, 140, 0.842); 
+  z-index: 9;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+
+section:nth-child(8) .design-box .screen:hover a {
+  opacity: 0;
+}
+
+section:nth-child(8) .design-box .screen::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.7;
+  z-index: 3;
+  color: #fff;
+  transition: 0.7s;
+}
+
+section:nth-child(8) .design-box .screen.mobile::before {
+  height: 511px;
+}
+
+section:nth-child(8) .design-box .screen:hover::before {
+  opacity: 0;
+}
