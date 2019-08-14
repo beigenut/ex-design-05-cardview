@@ -327,30 +327,26 @@ section:nth-child(1) .design-box .buttonBox input[type="button"]:hover {
 
 section:nth-child(2) .design-box {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  background: #1B1B1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section:nth-child(2) h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   font-family: 'Dancing Script', cursive;
   font-size: 9rem;
-  padding: 0 20px;
   color: #fff;
   text-shadow: 0 0 20px #ff005b;
   z-index: 1;
 }
 
 section:nth-child(2) h2:after {
+  font-family: 'Dancing Script', cursive;
   content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0 20px;
   z-index: -1;
   color: #ff005b;
   filter: blur(20px);
@@ -910,7 +906,7 @@ section:nth-child(8) .design-box .screen a {
   transform: translate(-50%, -50%);
   color: #fff;
   padding: 20px 30px;
-  border: 2px solid rgb(255, 229, 189);
+  border: 2px solid #ffffff;
   background-color: rgba(109, 126, 140, 0.842); 
   z-index: 9;
   white-space: nowrap;
