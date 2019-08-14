@@ -1,22 +1,21 @@
-// import Typed from './vendors/typed.js';
-
 // variables
 var $header_top = $('.header-top');
 var $nav = $('nav');
 
 // toggle menu 
 $header_top.find('a').on('click', function() {
-  $(this).parent().toggleClass('open-menu');
+  $nav.toggleClass('open-list');
+  $(this).parent().toggleClass('x-toggle')
 });
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', '#1B1B1C', 'transparent', '#40030E', '#40030E', '#FFAC00', '#2F3B40', '#36363c'],
+  sectionsColor: ['#B8AE9C', '#1B1B1C', 'transparent', '#40030E', '#40030E', '#FFAC00', '#2F3B40', '#36363c', 'transparent'],
   sectionSelector: '.vertical-scrolling',
   navigation: true,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection'],
+  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection', "section9"],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
@@ -61,4 +60,17 @@ const hideElement = searchEl.addEventListener('click', e => {
   typed.pause.status = true;
   searchBoxEl.appendChild(fragment);
   document.querySelector('.search-input').focus();
+})
+
+// SECTION 9 SCRIPT
+const $searchBox = $('.search-box-js');
+const $searchInput = $('.input-js');
+const $searchBtn = $('.search-btn');
+
+$searchInput.focus(function() {
+  $(this).parent().toggleClass('focused')
+})
+
+$searchInput.focusout(function() {
+  $(this).parent().toggleClass('focused')
 })
