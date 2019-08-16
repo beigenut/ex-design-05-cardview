@@ -102,3 +102,15 @@ const toggleBtn = document.querySelector('.toggle-btn')
 toggleBtn.addEventListener('click', function () {
   toggleBtn.classList.toggle("toggle-open")
 })
+
+const parentLists = document.querySelectorAll('.parent-list')
+const childMenus = document.querySelectorAll('.child-menu')
+
+parentLists.forEach((list, index) => {
+  list.addEventListener('click', function () {
+    for (let i of childMenus) {
+      i.style.maxHeight = 0;
+    }
+    childMenus[index].style.maxHeight = '10em'
+  })
+})

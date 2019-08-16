@@ -1147,9 +1147,10 @@ section:nth-child(10) .menu-box .child-list a:hover:before {
   opacity: 1;
 }
 
-section:nth-child(10) .menu-box .parent-list:target .child-menu {
+/* To prevent shrinking height, do it on Java script */
+/* section:nth-child(10) .menu-box .parent-list:target .child-menu {
   max-height: 10em;
-}
+} */
 
 /* floating button */
 section:nth-child(10) .floating-btn {
