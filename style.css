@@ -172,8 +172,8 @@ nav {
   height: 0;
   top: 70px;
   right: 0;
-  -webkit-transition: all 3s;
-  transition: all 3s;
+  -webkit-transition: all 1.8s;
+  transition: all 1.8s;
   opacity: 0;
   z-index: 99;
   overflow: hidden;
@@ -198,14 +198,14 @@ nav li a {
   display: block;
   color: #fff;
   font-size: 1.3rem;
-  padding: 20px 10px;
+  padding: 12px 10px;
   text-align: center;
   -webkit-transition: background .3s;
   transition: background .3s;
 }
 
 nav li:nth-child(1) a:nth-child(1) {
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 nav li a:hover {

@@ -1,9 +1,10 @@
 // variables
-var $header_top = $('.header-top');
-var $nav = $('nav');
+const $header_top = $('.header-top');
+const $burger = $('.toggle-menu');
+const $nav = $('nav');
 
 // toggle menu 
-$header_top.find('a').on('click', function () {
+$burger.on('click', function () {
   $nav.toggleClass('open-list');
   $(this).parent().toggleClass('x-toggle')
 });
@@ -63,22 +64,41 @@ const hideElement = searchEl.addEventListener('click', e => {
 })
 
 // SECTION 9 SCRIPT
-const $searchBox = $('.search-box-js');
-const $searchInput = $('.input-js');
-const $searchBtn = $('.search-btn');
+// const $searchBox = $('.search-box-js');
+// const $searchInput = $('.input-js');
 
-$searchInput.focus(function () {
-  $(this).parent().toggleClass('focused')
+// $searchInput.focusout(function () {
+//   if ($searchInput.val() == '') {
+//     $(this).parent().removeClass('focused')
+//   }
+// })
+
+// $searchInput.focus(function () {
+//   $(this).parent().addClass('focused')
+// });
+
+const searchBox = document.querySelector('.search-box-js')
+const searchInput = document.querySelector('.input-js')
+const searchBtn = document.querySelector('.search-btn')
+
+searchInput.addEventListener('focusin', function () {
+  searchBox.classList.add('focused')
 })
 
-$searchInput.focusout(function () {
-  $(this).parent().toggleClass('focused')
+searchInput.addEventListener('focusout', function () {
+  if (!searchInput.validity.valid) {
+    searchBox.classList.remove('focused')
+  }
+})
+
+searchBtn.addEventListener('click', e => {
+  e.preventDefault();
+  alert(`Keyword is : ${searchInput.value}`)
 })
 
 // SECTION 10 SCRIPT
 const toggleBtn = document.querySelector('.toggle-btn')
 
-document.querySelector('.toggle-btn').addEventListener('click', function () {
-  console.log('click')
+toggleBtn.addEventListener('click', function () {
   toggleBtn.classList.toggle("toggle-open")
 })
