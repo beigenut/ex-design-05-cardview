@@ -1075,21 +1075,22 @@ section:nth-child(9) .search-box .search-btn .fi-padding {
 }
 
 /* SECTION 10  */
-/* accordian menu */
 section:nth-child(10) .design-box {
   position: relative;
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(135deg, #5EFCE8 10%, #736EFE 100%);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
+/* accordian menu */
 section:nth-child(10) .menu-box {
   width: 270px;
   border-radius: 8px;
   overflow: hidden;
+  margin-right: 20%;
 }
 
 section:nth-child(10) .menu-box .parent-list {
@@ -1195,9 +1196,12 @@ section:nth-child(10) .floating-btn ul li a {
   transition: 0.2s;
 }
 
+section:nth-child(10) .floating-btn .fi-padding {
+  transform: rotate(-45deg);
+}
+
 section:nth-child(10) .floating-btn ul li a:hover {
   background: #736EFE;
-
 }
 
 section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(1) {
@@ -1263,12 +1267,18 @@ section:nth-child(10) .floating-btn .toggle-btn {
   align-items: center;
   z-index: 1;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn:hover {
+  background: #ce1d58;
 }
 
 section:nth-child(10) .floating-btn .toggle-btn:before {
   content: "\271a";
   font-size: 1.8rem;
   color: #fff;
+  transform: rotate(-45deg);
 }
 
 section:nth-child(10) .floating-btn .toggle-btn.toggle-open:before {
