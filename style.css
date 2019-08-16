@@ -1075,6 +1075,7 @@ section:nth-child(9) .search-box .search-btn .fi-padding {
 }
 
 /* SECTION 10  */
+/* accordian menu */
 section:nth-child(10) .design-box {
   position: relative;
   width: 100vw;
@@ -1147,4 +1148,138 @@ section:nth-child(10) .menu-box .child-list a:hover:before {
 
 section:nth-child(10) .menu-box .parent-list:target .child-menu {
   max-height: 10em;
+}
+
+/* floating button */
+section:nth-child(10) .floating-btn {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  transform: rotate(45deg);
+}
+
+section:nth-child(10) .floating-btn ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section:nth-child(10) .floating-btn ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  transform: scale(0);
+}
+
+section:nth-child(10) .floating-btn ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 70px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: #fff;
+  font-size: 1.3rem;
+  transition: 0.2s;
+}
+
+section:nth-child(10) .floating-btn ul li a:hover {
+  background: #736EFE;
+
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(1) {
+  top: -100%;
+  left: -100%;
+  transition-delay: 0s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(2) {
+  top: -100%;
+  left: 0%;
+  transition-delay: 0.1s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(3) {
+  top: -100%;
+  left: 100%;
+  transition-delay: 0.2s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(4) {
+  top: 0%;
+  left: 100%;
+  transition-delay: 0.3s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(5) {
+  top: 100%;
+  left: 100%;
+  transition-delay: 0.4s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(6) {
+  top: 100%;
+  left: 0%;
+  transition-delay: 0.5s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(7) {
+  top: 100%;
+  left: -100%;
+  transition-delay: 0.6s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li:nth-child(8) {
+  top: 0%;
+  left: -100%;
+  transition-delay: 0.7s;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e91e63;
+  transform: scale(0.9);
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn:before {
+  content: "\271a";
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open:before {
+  content: "\2212";
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+section:nth-child(10) .floating-btn .toggle-btn.toggle-open~ul li {
+  top: 0;
+  left: 0;
+  transform: scale(0.9);
 }

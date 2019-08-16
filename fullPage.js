@@ -74,3 +74,11 @@ $searchInput.focus(function () {
 $searchInput.focusout(function () {
   $(this).parent().toggleClass('focused')
 })
+
+// SECTION 10 SCRIPT
+const toggleBtn = document.querySelector('.toggle-btn')
+
+document.querySelector('.toggle-btn').addEventListener('click', function () {
+  console.log('click')
+  toggleBtn.classList.toggle("toggle-open")
+})
