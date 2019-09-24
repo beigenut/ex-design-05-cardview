@@ -2,7 +2,7 @@
   <h3 align="center">ex-design-05-cardview</h3>
   <p align="center">
   A collection of useful css designs based on FullPage.js<br> 
-  To check out the website?<a href="https://beigenut.github.io/ex-design-05-cardview/" target="_blank"> Click here</a> <br>
+  To check out the website?<a href="https://beigenut.github.io/ex-design-05-useful-designs/" target="_blank"> Click here</a> <br>
   You do not need to sign in or log in at this time :)
 </p>
 </p>
@@ -29,6 +29,10 @@ A CSS design collection site that utilized fullpage.js.
 - Movies - hover effect
 - Smoke animation effect - mix-blend-mode
 - Word typing effect - typed.js
+- Mobile App Hover Effect
+- Scroll Hover Effect
+- Search Button - Hover Effect
+- Accordion & Mobile button Effect
 
 
 <!-- CONTRIBUTING -->
@@ -47,7 +51,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/beigenut/ex-design-05-cardview](https://github.com/beigenut/ex-design-05-cardview)
+Project Link: [https://github.com/beigenut/ex-design-05-useful-designs/](https://github.com/beigenut/ex-design-05-useful-designs/)
 
 
 
